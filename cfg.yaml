@@ -1,0 +1,58 @@
+# reference path
+reference_image_path: data/reference
+reference_test_path: data/test
+
+# data path
+train_image_path_gray: dataset_gray_full/train_data
+test_image_path_gray: dataset_gray_full/test_data
+
+train_image_path_cycle: dataset_cut_small/train_data
+test_image_path_cycle: dataset_cut_small/test_data
+
+# origin data path (not used to train, just clarify)
+data_path_origin: HSI_origin
+
+# model path
+cat_saved_model_path_deterministic: saved_models/05-21_ssim-best
+cat_saved_model_path_bayesian: saved_models/06-11_pix2pix_2D_gray_bayesian_SSIM_full #06-06_pix2pix_2D_gray_bayesian_SSIM_full #saved_models/05-29_2D_gray_SSIM_gray #
+cat_model_name_generator: generator_X_cycle_16.pth #generator_16_0.pth
+cat_model_name_discriminator: discriminator_9_0.pth
+
+cat_save_to: pred_res
+
+# dataset setting
+start_data: 1 # the first focus to be trained
+end_data: 31 # the last focus to be trained
+spectrum_num: 6 # num of spectrum (>=2)
+
+# general train setting
+epoch: 9 # epoch to start training from
+n_epoch: 20 # number of epochs of training ## !!Epoch should be LARGER if batch size>1
+train_dataset_name: HSI # name of the dataset
+batch_size: 1 # size of the batches
+img_num: 1 # number of images loaded once
+b1: 0.5 # adam: decay of first order momentum of gradient (之前是0.9)
+b2: 0.999 # adam: decay of second order momentum of gradient
+n_cpu: 14 # number of cpu threads to use during batch generation
+patch_height: 256 # size of patch height
+patch_width: 256 # size of patch width
+img_height: 1536 # size of image height
+img_width: 2048 # size of image width
+channels: 3 # number of image channels
+checkpoint_interval: 1 # interval between model checkpoints
+
+# concatenate setting
+cat_preprocess: False
+cat_dataset_name: full
+
+# pix2pix setting
+lr_g: 0.0002 # adam: learning rate
+lr_d: 0.0002 # adam: learning rate
+lambda_pixel: 10 # lambda of loss_g
+
+# cycle setting
+w_d: 0.0001  # adamW: weight decay
+lr_g_x: 0.0002 # adam: learning rate
+lr_d_x: 0.0002 # adam: learning rate
+lr_g_y: 0.0002 # adam: learning rate
+lr_d_y: 0.0002 # adam: learning rate
