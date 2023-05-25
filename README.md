@@ -38,5 +38,5 @@ You will need to set all other parameters like learning rate, epochs in `cfg.yam
 ## Inference 
 First, set path in `cfg.yaml` to load a pre-trained model. 
 
-Then run `predict.py` for a deterministic model,
-`predict_with_uncertainty.py` for a Bayesian model.
+Then run `predict.py` with a deterministic model,
+`predict_with_uncertainty.py` with a Bayesian model.
