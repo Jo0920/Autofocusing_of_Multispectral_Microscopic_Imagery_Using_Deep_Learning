@@ -5,11 +5,12 @@ The codes were developed by me (E-Mail: [ge35sog@mytum.de](mailto:ge35sog@mytum.
 
 ![pix2pix](https://github.com/Jo0920/Autofocusing_of_Multispectral_Microscopic_Imagery_Using_Deep_Learning/blob/main/imgs/pix2pix.png)
 
-<center>Pix2Pix structure</center>
+<p align="center">Pix2Pix structure</p>
 
 ![cycleGAN](https://github.com/Jo0920/Autofocusing_of_Multispectral_Microscopic_Imagery_Using_Deep_Learning/blob/main/imgs/cyclegan.png)
 
-<center>cycleGAN structure</center>
+<p align="center">cycleGAN structure</p>
+
 
 **Input:** N channels of defocused multi-spectral images of [N,2048,1536] size. In the training, they would be cut into [N,256,256] tensors. 
 N is set to 6 by default, since 6 different wavelengths filters are used in this project (500nm,520nm, 540nm, 56nm, 580nm, 600nm). 
