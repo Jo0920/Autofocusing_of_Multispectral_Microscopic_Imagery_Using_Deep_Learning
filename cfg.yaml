@@ -1,24 +1,24 @@
 # reference path
-reference_image_path: data/reference
-reference_test_path: data/test
+reference_image_path: ...
+reference_test_path: ...
 
 # data path
-train_image_path_gray: dataset_gray_full/train_data
-test_image_path_gray: dataset_gray_full/test_data
+train_image_path_gray: ...
+test_image_path_gray: ...
 
-train_image_path_cycle: dataset_cut_small/train_data
-test_image_path_cycle: dataset_cut_small/test_data
+train_image_path_cycle: ...
+test_image_path_cycle: ...
 
-# origin data path (not used to train, just clarify)
-data_path_origin: HSI_origin
+# origin data path
+data_path_origin: ...
 
 # model path
-cat_saved_model_path_deterministic: saved_models/05-21_ssim-best
-cat_saved_model_path_bayesian: saved_models/06-11_pix2pix_2D_gray_bayesian_SSIM_full #06-06_pix2pix_2D_gray_bayesian_SSIM_full #saved_models/05-29_2D_gray_SSIM_gray #
-cat_model_name_generator: generator_X_cycle_16.pth #generator_16_0.pth
-cat_model_name_discriminator: discriminator_9_0.pth
+cat_saved_model_path_deterministic: ...
+cat_saved_model_path_bayesian: ...
+cat_model_name_generator: ...
+cat_model_name_discriminator: ...
 
-cat_save_to: pred_res
+cat_save_to: ...
 
 # dataset setting
 start_data: 1 # the first focus to be trained
@@ -31,7 +31,7 @@ n_epoch: 20 # number of epochs of training ## !!Epoch should be LARGER if batch 
 train_dataset_name: HSI # name of the dataset
 batch_size: 1 # size of the batches
 img_num: 1 # number of images loaded once
-b1: 0.5 # adam: decay of first order momentum of gradient (之前是0.9)
+b1: 0.9 # adam: decay of first order momentum of gradient
 b2: 0.999 # adam: decay of second order momentum of gradient
 n_cpu: 14 # number of cpu threads to use during batch generation
 patch_height: 256 # size of patch height

@@ -23,6 +23,7 @@ def train_model(model_name, model_type, criterion_type, conv_type, load_model=Fa
                                         load_model_path_g=model_path_g,
                                         load_model_path_d=model_path_d)
             test_train.train()
+        '''
         elif model_type == "3D":
             # 18 channels for 6 RGB multispectral images
             test_train = MS_GAN_pix2pix(in_channels=1,
@@ -33,6 +34,7 @@ def train_model(model_name, model_type, criterion_type, conv_type, load_model=Fa
                                         load_model_path_g=model_path_g,
                                         load_model_path_d=model_path_d)
             test_train.train()
+        '''
         elif model_type == "2D_gray":
             # 6 channels for 6 grayscale images
             test_train = MS_GAN_pix2pix(in_channels=cfg.spectrum_num,
